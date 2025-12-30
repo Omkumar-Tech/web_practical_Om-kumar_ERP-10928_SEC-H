@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Responsive Web Page Example</title>
+
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  header, footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+
+  nav {
+    background-color: #555;
+    overflow: hidden;
+  }
+
+  nav a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+
+  nav a:hover {
+    background-color: #111;
+  }
+
+  main {
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  article {
+    flex: 1 1 300px; /* flexible width */
+    background-color: #f4f4f4;
+    margin: 10px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  /* Media Query for smaller screens */
+  @media (max-width: 600px) {
+    nav a {
+      float: none;
+      width: 100%;
+    }
+    main {
+      flex-direction: column;
+    }
+  }
+</style>
+
+</head>
+<body>
+
+<header>
+  <h1>Responsive Web Page</h1>
+</header>
+
+<nav>
+  <a href="#">Home</a>
+  <a href="#">About</a>
+  <a href="#">Contact</a>
+</nav>
+
+<main>
+  <article>
+    <h2>Article 1</h2>
+    <p>This is a responsive article. It adjusts its width based on screen size.</p>
+  </article>
+  <article>
+    <h2>Article 2</h2>
+    <p>This is another article demonstrating responsive design using CSS flexbox and media queries.</p>
+  </article>
+</main>
+
+<footer>
+  <p>&copy; 2025 My Responsive Website</p>
+</footer>
+
+</body>
+</html>

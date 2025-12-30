@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sum of Array</title>
+</head>
+<body>
+
+<h2>Enter numbers separated by comma</h2>
+
+<input type="text" id="numbers" placeholder="e.g. 10,20,30">
+<br><br>
+<button onclick="findSum()">Find Sum</button>
+
+<p id="result"></p>
+
+<script>
+  function findSum() {
+    let input = document.getElementById("numbers").value;
+    let arr = input.split(",").map(Number);
+
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+      sum += arr[i];
+    }
+
+    document.getElementById("result").innerHTML =
+      "Sum of all numbers: " + sum;
+  }
+</script>
+
+</body>
+</html>

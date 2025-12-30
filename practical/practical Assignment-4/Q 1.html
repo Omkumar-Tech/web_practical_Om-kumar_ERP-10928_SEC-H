@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check Even Number</title>
+</head>
+<body>
+
+<h2>Check Even or Odd</h2>
+
+<input type="number" id="num" placeholder="Enter a number">
+<br><br>
+<button onclick="checkEven()">Check</button>
+
+<p id="result"></p>
+
+<script>
+  // Arrow function
+  const isEven = (num) => num % 2 === 0;
+
+  function checkEven() {
+    let number = document.getElementById("num").value;
+
+    if (isEven(number)) {
+      document.getElementById("result").innerHTML = "True : Number is Even";
+    } else {
+      document.getElementById("result").innerHTML = "False : Number is Odd";
+    }
+  }
+</script>
+
+</body>
+</html>

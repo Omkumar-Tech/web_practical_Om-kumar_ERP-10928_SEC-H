@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Merge Arrays</title>
+</head>
+<body>
+
+<h3>Enter numbers for first array (comma separated)</h3>
+<input type="text" id="array1" placeholder="e.g. 1,2,3">
+<br><br>
+
+<h3>Enter numbers for second array (comma separated)</h3>
+<input type="text" id="array2" placeholder="e.g. 4,5,6">
+<br><br>
+
+<button onclick="mergeArrays()">Merge Arrays</button>
+
+<p id="result"></p>
+
+<script>
+  function mergeArrays() {
+    // Get input and convert to number arrays
+    let arr1 = document.getElementById("array1").value.split(",").map(Number);
+    let arr2 = document.getElementById("array2").value.split(",").map(Number);
+
+    // Merge using spread operator
+    let merged = [...arr1, ...arr2];
+
+    document.getElementById("result").innerHTML =
+      "Merged Array: " + merged.join(", ");
+  }
+</script>
+
+</body>
+</html>

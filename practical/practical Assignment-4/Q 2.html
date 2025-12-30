@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multiline String</title>
+</head>
+<body>
+
+<h2>Enter 3 lines</h2>
+
+<input type="text" id="line1" placeholder="Line 1"><br><br>
+<input type="text" id="line2" placeholder="Line 2"><br><br>
+<input type="text" id="line3" placeholder="Line 3"><br><br>
+
+<button onclick="showMessage()">Show Message</button>
+
+<pre id="result"></pre>
+
+<script>
+  function showMessage() {
+    let l1 = document.getElementById("line1").value;
+    let l2 = document.getElementById("line2").value;
+    let l3 = document.getElementById("line3").value;
+
+    // Template literal (multiline string)
+    let message = `
+${l1}
+${l2}
+${l3}
+`;
+
+    document.getElementById("result").innerText = message;
+  }
+</script>
+
+</body>
+</html>

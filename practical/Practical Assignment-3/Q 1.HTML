@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Even Odd Count</title>
+</head>
+<body>
+
+<h2>Enter numbers separated by comma</h2>
+
+<input type="text" id="numbers" placeholder="e.g. 1,2,3,4,5">
+<br><br>
+<button onclick="countEvenOdd()" color=" darkgray">Check</button>
+
+<p id="result"></p>
+
+<script>
+  function countEvenOdd() {
+    let input = document.getElementById("numbers").value;
+    let arr = input.split(",").map(Number);
+
+    let even = 0;
+    let odd = 0;
+
+    for (let i = 0; i < arr.length; i++) {
+      if (arr[i] % 2 === 0) {
+        even++;
+      } else {
+        odd++;
+      }
+    }
+
+    document.getElementById("result").innerHTML =
+      "Even numbers: " + even + "<br>Odd numbers: " + odd;
+  }
+</script>
+
+</body>
+</html>
+

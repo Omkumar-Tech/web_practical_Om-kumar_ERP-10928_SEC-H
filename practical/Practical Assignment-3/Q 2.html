@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Remove Duplicates</title>
+</head>
+<body>
+
+<h1>Enter numbers separated by comma</h1>
+
+<input type="text" id="numbers" placeholder="e.g. 1,2,2,3,4,4,5">
+<br><br>
+<button onclick="removeDuplicate()" >Remove Duplicates</button>
+
+<p id="result"></p>
+
+<script>
+  function removeDuplicate() {
+    let input = document.getElementById("numbers").value;
+    let arr = input.split(",").map(Number);
+
+    let uniqueArr = [...new Set(arr)];
+
+    document.getElementById("result").innerHTML =
+      "Array without duplicates: " + uniqueArr.join(", ");
+  }
+</script>
+
+</body>
+</html>
